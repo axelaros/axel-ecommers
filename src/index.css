@@ -27,5 +27,18 @@ a{
     margin: 25px;
     text-decoration: none;
     color: black;
+    padding: 5px;
     
     }
+    
+    a:hover{
+     background-color: yellow;
+     
+    
+    }
+
+    .material-symbols-outlined{
+        display: flex;
+       align-items: center;
+       
+        }
