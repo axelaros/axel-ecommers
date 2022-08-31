@@ -1,13 +1,52 @@
-const ItemListContainer = ({saludo}) => {
-    return(
-<> 
-<h2>{saludo}</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-   Ullam eum veniam eos nemo doloremque laborum, voluptas ut dolorum reprehenderit
-   mollitia voluptates atque quo obcaecati totam ea dignissimos sed pariatur vel?
-</p>
-</>
-    )
+import { productos } from '../../mock/producto'
+import React,{useState,useEffect} from 'react'
+import ItemList from '../ItemList/ItemList'
+
+
+
+const ItemListContainer = () => {
+  
+  const [producto,setProducto]=useState([])
+
+useEffect(()=>{
+    
+    const getProduct=new Promise((res,rej) =>{
+        setTimeout(() => {
+          res(productos);
+        }, 2000);
+      
+        
+          })
+          getProduct.then((data)=>{
+            setProducto(data);
+
+          })
+        
+
 }
- 
+
+
+
+
+
+
+)
+
+console.log(producto);
+
+    return(
+      <div>
+       
+        <ItemList producto={producto}/>
+      </div>
+        
+    )
+
+    
+
+  
+    
+  
+}
+
 export default ItemListContainer

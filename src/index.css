@@ -42,3 +42,35 @@ a{
        align-items: center;
        
         }
+
+/*----------------estructura cards----------------------------------
+*/
+.cardContainer{
+    display: flex;
+    height: 1000px ;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    
+    
+    
+    
+}
+
+.cardBody{
+display: flex;
+height: 400px;
+height: 400px;
+justify-content: center;
+flex-direction: column;
+padding: 20px;
+align-items: center;
+border: 2px solid black;
+margin: 20px;
+
+
+}
+
+
+
+

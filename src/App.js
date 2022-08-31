@@ -10,7 +10,7 @@ const App = ()=>{
   return (
 <> 
    <Navbar />
-   <ItemListContainer saludo={saludo}/>
+   <ItemListContainer />
    <ItemCount stock={10} initial={1} onAdd={onAdd}/>
    
 </>
