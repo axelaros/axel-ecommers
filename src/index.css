@@ -47,10 +47,11 @@ a{
 */
 .cardContainer{
     display: flex;
-    height: 1000px ;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     padding-top: 60px;
+    
     
     
     
@@ -60,17 +61,29 @@ a{
 .cardBody{
 display: flex;
 height: 400px;
-height: 400px;
+width:  15%;
 justify-content: center;
 flex-direction: column;
 padding: 20px;
 align-items: center;
 border: 2px solid black;
 margin: 20px;
-
-
 }
 
+.detalle img{
+    height: 150px;
+    width: 200px;
+}
 
-
+.detalle{
+display: flex;
+height: 300px;
+width:  15%;
+justify-content: center;
+flex-direction: column;
+padding: 20px;
+align-items: center;
+border: 2px solid red;
+margin: 20px;
+}
 

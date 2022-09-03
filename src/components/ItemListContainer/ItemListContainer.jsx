@@ -1,6 +1,9 @@
 import { productos } from '../../mock/producto'
 import React,{useState,useEffect} from 'react'
 import ItemList from '../ItemList/ItemList'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
+
+
 
 
 
@@ -36,9 +39,14 @@ console.log(producto);
 
     return(
       <div>
+        
+       <ItemList producto={producto}/>
+       <ItemDetailContainer/>
        
-        <ItemList producto={producto}/>
-      </div>
+       </div>
+      
+
+      
         
     )
 
