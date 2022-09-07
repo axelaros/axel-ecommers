@@ -26,7 +26,7 @@ export const productos = [
 {
       id:3,
       Title:"Televisor smart tv",
-      Category:"Electro",
+      Category:"Tecnoytv",
       Marca:"LG",
       Price: 152000,
       Imagen:"https://www.lg.com/ar/images/televisores/md05781190/gallery/medium07_1.jpg ",
@@ -37,7 +37,7 @@ export const productos = [
 {
     id:4,
     Title:"Notebook",
-    Category:"Electro",
+    Category:"Tecnoytv",
     Marca:"Lenovo Thinkpad ",
     Price: 339900,
     Imagen:"https://www.lenovo.com/medias/lenovo-laptops-thinkpad-t-series-t15-gen2-intel-hero.png?context=bWFzdGVyfHJvb3R8MzUzOTU1fGltYWdlL3BuZ3xoNTEvaGI3LzE0MDgxMzc3NTk5NTE4LnBuZ3w3NjYxYzRiMTViNGJhNzlmYzc4NmRmYjA0ODA1NmZlYTdhNjMxNmJkODAwMGU0ZDcxYjUxNTU0YTUxNmQ4MThl ",
@@ -70,7 +70,7 @@ export const productos = [
 {
     id:7,
     Title:"Celular Samsung Galaxy S20",
-    Category:"Electro",
+    Category:"Tecnoytv",
     Marca:"Samsung",
     Price:120999,
     Imagen:"https://www.cetrogar.com.ar/media/catalog/product/t/e/te2658.jpg?width=500&height=500&canvas=500,500&quality=80&bg-color=255,255,255&fit=bounds ",
@@ -103,7 +103,7 @@ export const productos = [
 {
     id:10,
     Title:"Tablet ",
-    Category:"Electro",
+    Category:"Tecnoytv",
     Marca:"Samsung",
     Price:65350,
     Imagen:" https://i.blogs.es/d6b6d1/c0153.mp4.00_21_46_12.imagen-fija001/840_560.jpg",
@@ -111,8 +111,27 @@ export const productos = [
 
 },
 
+{
+    id:11,
+    Title: "Microondas 28l ",
+    Category :"Electro",
+    Marca:"Whirlpool",
+    Price: 50000,
+    Imagen:"https://whirlpoolarg.vteximg.com.br/arquivos/ids/162921/Copia-de-frente-cerrado-min.jpg?v=637822061659830000 " ,
+    stock: 10
 
+},
 
+{
+    id:12,
+    Title: "Lavavajillas LG QuadWash ",
+    Category :"Electro",
+    Marca:"LG",
+    Price: 118500,
+    Imagen:"https://www.lg.com/es/images/lavavajillas/md07519862/des_1.jpg " ,
+    stock: 10
+
+},
 
 
 

@@ -1,7 +1,8 @@
 import { productos } from '../../mock/producto'
 import React,{useState,useEffect} from 'react'
 import ItemList from '../ItemList/ItemList'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
+import { useParams } from 'react-router-dom'
+
 
 
 
@@ -10,12 +11,17 @@ import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 const ItemListContainer = () => {
   
   const [producto,setProducto]=useState([])
+  
+const {CategoryName} = useParams()
 
 useEffect(()=>{
     
     const getProduct=new Promise((res,rej) =>{
+      const prodFiltrados=productos.filter(
+        (prod)=> prod.Category===CategoryName
+      );
         setTimeout(() => {
-          res(productos);
+          res(CategoryName ? prodFiltrados:productos);
         }, 2000);
       
         
@@ -35,13 +41,13 @@ useEffect(()=>{
 
 )
 
-console.log(producto);
+  
 
     return(
       <div>
         
        <ItemList producto={producto}/>
-       <ItemDetailContainer/>
+       
        
        </div>
       

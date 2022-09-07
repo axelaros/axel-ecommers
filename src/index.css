@@ -6,8 +6,7 @@
 }
 .titulo{
     display: flex;
-    font-size: 35px;
-    justify-content: center;
+    justify-content:space-around;
     letter-spacing: 2.5px;
     align-items: center;
     
@@ -23,19 +22,18 @@
 }
 
 a{
+   display: flex;
    font-size: 20px;
     margin: 25px;
     text-decoration: none;
     color: black;
     padding: 5px;
+    align-items: center;
+    letter-spacing: 1.5px;
     
     }
     
-    a:hover{
-     background-color: yellow;
-     
-    
-    }
+  
 
     .material-symbols-outlined{
         display: flex;
@@ -60,7 +58,7 @@ a{
 
 .cardBody{
 display: flex;
-height: 400px;
+height: 480px;
 width:  15%;
 justify-content: center;
 flex-direction: column;

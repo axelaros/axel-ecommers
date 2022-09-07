@@ -1,20 +1,17 @@
 import { CartWidget } from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const Navbar =()=>{
     return(
 <header>
     <nav className="navbar">
-        <h1 className="titulo">Electro mania</h1>
+       <Link to="/">Electro mania</Link>
         <ul className="cabezera">
-            <li>
-                <a href="https://www.google.com/?hl=es "> Productos</a>
-             </li>
-            <li>
-                <a href="https://www.google.com/?hl=es "> Contacto </a>
-            </li>
-            <li>
-                <a href="https://www.google.com/?hl=es ">  Nosotros </a>
-             </li>
+         
+              <Link to="/Category/Electro">Electro </Link>
+              <Link to="/Category/Tecnoytv">TecnoyTv</Link>
+            
+      
 
         </ul>
        <CartWidget />
@@ -26,3 +23,4 @@ const Navbar =()=>{
 }
 
 export default Navbar;
+
