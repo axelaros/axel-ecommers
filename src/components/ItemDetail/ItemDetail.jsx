@@ -7,6 +7,7 @@ const ItemDetail = ({Item}) => {
     <div>
         <h3> {Item.Title} </h3>
         <p> Precio: {Item.Price}</p>
+        <p>marca: {Item.Marca}</p>
         
     </div>
 </div>

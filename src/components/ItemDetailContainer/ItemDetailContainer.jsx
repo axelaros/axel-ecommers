@@ -31,7 +31,7 @@ const ItemDetailContainer= ()=>{
         .catch((error)=>{
             console.log(error)
         })
-    },[]);
+    },);
    
 
 return <ItemDetail Item={Item} />
