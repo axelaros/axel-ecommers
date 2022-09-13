@@ -3,6 +3,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Navbar from "./components/Navbar/Navbar";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
+import CartProvider from "./context/CartContext";
 
 
 
@@ -10,6 +11,7 @@ const App = ()=>{
  
 
   return (
+    <CartProvider>
 <BrowserRouter> 
    <Navbar />
    <Routes>
@@ -31,6 +33,7 @@ const App = ()=>{
   
   
 </BrowserRouter>
+</CartProvider>
   );
 };
 

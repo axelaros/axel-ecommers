@@ -86,3 +86,14 @@ margin: 20px;
 }
 
 
+
+.detalleCarro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 85%;
+    border: 3px solid black;
+}
+
