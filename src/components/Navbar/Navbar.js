@@ -14,8 +14,9 @@ const Navbar =()=>{
       
 
         </ul>
+        <Link to="/cart"> 
        <CartWidget />
-            
+       </Link>
     </nav>
 </header>
 

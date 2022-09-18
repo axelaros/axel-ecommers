@@ -97,3 +97,22 @@ margin: 20px;
     border: 3px solid black;
 }
 
+
+
+.carritoCompra{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+   
+}
+
+.buttonCarrito{
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+

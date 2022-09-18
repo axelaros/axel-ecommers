@@ -7,6 +7,8 @@ import CartProvider from "./context/CartContext";
 
 
 
+
+
 const App = ()=>{
  
 
@@ -28,6 +30,8 @@ const App = ()=>{
 
     <Route path="/cart" element={<Cart/>}
     />
+
+   
    
    </Routes>
   

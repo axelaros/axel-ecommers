@@ -38,6 +38,15 @@ const sumarCantidad = (Item,cantidad)=>{
 
 console.log(cart);
 
+const totalUnCarrito = () =>{
+let unidades= 0
+cart.forEach((prod)=>{
+    unidades = unidades + (prod.cantidad)
+})
+return unidades
+}
+
+
 const TotalPrice = ()=>{
     let count=0
     cart.forEach((prod)=>{
@@ -56,7 +65,7 @@ setcart(carritofiltrado)
     const clearCart=()=>{
         setcart([]);
     }
-  return (<CartContext.Provider value={{cart, addToCart, clearCart, eliminarProd, TotalPrice }}>
+  return (<CartContext.Provider value={{cart, addToCart, clearCart, eliminarProd, TotalPrice, totalUnCarrito }}>
     {children}
   </CartContext.Provider>
    
