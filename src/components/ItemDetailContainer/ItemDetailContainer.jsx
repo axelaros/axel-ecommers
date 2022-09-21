@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
-
-import { productos } from "../../mock/producto"
 import ItemDetail from "../ItemDetail/ItemDetail";
+import {db} from "../../firebaseConfig"
+import {getDoc,doc,collection} from "firebase/firestore"
 
 
 
@@ -12,26 +12,19 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 const ItemDetailContainer= ()=>{
     const [Item, setItem]= useState({})
     const {id}= useParams()
-    const idNumerico=Number(id)
+    
 
     useEffect(()=>{
-        const getProduct=()=> new Promise((res, rej) => {
-            const unicaCard=productos.find((prod)=> prod.id===idNumerico);
-            
-            setTimeout(()=>{
-                res(unicaCard);
+       const itemCollection = collection(db,"productos")
+       const ref = doc(itemCollection,id)
+       getDoc(ref).then((res)=>{
+setItem({
+    id:res.id,
+    ...res.data()
+})
+       })
 
-            },2000);
-        });
-        
-        getProduct()
-        .then((data)=>{
-            setItem(data);
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
-    },);
+    },[id]);
    
 
 return <ItemDetail Item={Item} />
@@ -41,4 +34,19 @@ return <ItemDetail Item={Item} />
 
 export default ItemDetailContainer;
 
+//const getProduct=()=> new Promise((res, rej) => {
+  //  const unicaCard=productos.find((prod)=> prod.id===idNumerico);
     
+    //setTimeout(()=>{
+      //  res(unicaCard);
+
+    //},2000);
+//});
+
+//getProduct()
+//.then((data)=>{
+  //  setItem(data);
+//})
+//.catch((error)=>{
+  //  console.log(error)
+//})

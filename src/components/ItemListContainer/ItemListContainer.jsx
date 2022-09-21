@@ -1,10 +1,10 @@
-import { productos } from '../../mock/producto'
+
 import React,{useState,useEffect} from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import PacmanLoader from "react-spinners/PacmanLoader"
-
-
+import {collection, getDocs, query, where} from "firebase/firestore"
+import{db} from "../../firebaseConfig"
 
 
 
@@ -17,29 +17,35 @@ const ItemListContainer = () => {
   
 const {CategoryName} = useParams()
 
-useEffect(()=>{
-    
-    const getProduct=new Promise((res,rej) =>{
-      const prodFiltrados=productos.filter(
-        (prod)=> prod.Category===CategoryName
-      );
-        setTimeout(() => {
-          res(CategoryName ? prodFiltrados:productos);
-        }, 2000);
+useEffect(()=>{ 
+  
+  const itemCollection = collection(db, "productos")
+  
+  const referencia = CategoryName
+  ? query(itemCollection,where("Category","==",CategoryName))
+  :itemCollection;
+ 
+ 
+  getDocs(referencia)
+  .then((res)=>{
+    const products = res.docs.map((prod)=>{
+     return{
+      id: prod.id,
+      ...prod.data(),
       
-        
-          })
-          getProduct.then((data)=>{
-            setProducto(data);
-            setisLoading(false)
-
-          })
-          return ()=>{
-           setisLoading(true)
-          }
-
-        
-
+     };
+  
+     });
+  setProducto(products);
+  })
+  .catch((error)=>{
+    console.log(error);
+  })
+  .finally(()=>{
+    setisLoading(false)
+  })
+  
+ 
 },[CategoryName]);
 
   
@@ -69,3 +75,24 @@ useEffect(()=>{
 }
 
 export default ItemListContainer
+
+//const getProduct=new Promise((res,rej) =>{
+  //const prodFiltrados=productos.filter(
+   // (prod)=> prod.Category===CategoryName
+ // );
+   // setTimeout(() => {
+    //  res(CategoryName ? prodFiltrados:productos);
+    //}, 2000);
+  
+    
+    //  })
+      //getProduct.then((data)=>{
+       // setProducto(data);
+        //setisLoading(false)
+
+      //})
+      //return ()=>{
+       //setisLoading(true)
+      //}
+
+    
