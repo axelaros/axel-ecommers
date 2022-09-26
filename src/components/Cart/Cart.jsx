@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
+import Form from '../Form/Form'
 
 
 
 
 const Cart = () => {
+  const [idCompra,setIdCompra] = useState("")
   const {cart,clearCart,eliminarProd,TotalPrice,} = useContext(CartContext)
   console.log(cart);
+  const total=TotalPrice()
+
+  const handleId=(id)=>{
+    setIdCompra(id)
+
+  }
+
+if(idCompra){
+  return <h2>Gracias por tu compra tu id de compra es {idCompra}</h2>
+}
 
   if (cart.length === 0){
     return <div className='carritoCompra'>    
@@ -32,7 +44,8 @@ const Cart = () => {
         ))
       }
       <button onClick={clearCart}>Clear Cart</button>
-      <p>Total: ${TotalPrice()} </p>
+      <p>Total: ${total} </p>
+      <Form cart={cart} total={total} clearCart={clearCart} handleId={handleId}/>
     </div>
   )
 }
