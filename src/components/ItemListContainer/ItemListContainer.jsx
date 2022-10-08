@@ -76,23 +76,3 @@ useEffect(()=>{
 
 export default ItemListContainer
 
-//const getProduct=new Promise((res,rej) =>{
-  //const prodFiltrados=productos.filter(
-   // (prod)=> prod.Category===CategoryName
- // );
-   // setTimeout(() => {
-    //  res(CategoryName ? prodFiltrados:productos);
-    //}, 2000);
-  
-    
-    //  })
-      //getProduct.then((data)=>{
-       // setProducto(data);
-        //setisLoading(false)
-
-      //})
-      //return ()=>{
-       //setisLoading(true)
-      //}
-
-    

@@ -10,7 +10,7 @@ const Form = ({cart,total,clearCart,handleId}) => {
   const [telefono,setTelefono] =useState("")
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault(); 
     const order = {
         buyer:{nombre:nombre, apellido:apellido, email:email, telefono:telefono},
         items: cart,
@@ -48,12 +48,12 @@ const Form = ({cart,total,clearCart,handleId}) => {
   
   return (
     <div style={{marginTop: "15px"}}>
-<form action='' onSubmit={handleSubmit}>
+<form action='' onSubmit={handleSubmit} className="formulario">
     <input type="text" placeholder="Nombre" value={nombre} onChange={handleChangeNombre}/>
     <input type="text" placeholder='Apellido' value={apellido} onChange={handleChangeApellido}/>
     <input type="email" placeholder="email" value={email} onChange={handleChangeEmail}/>
     <input type="number" placeholder="telefono" value={telefono} onChange={handleChangeTelefono}/>
-    <button>Enviar</button>
+    <button className='botonEnviar'>Enviar</button>
      
      </form> 
 </div>

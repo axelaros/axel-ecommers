@@ -45,6 +45,3 @@ const ItemDetail = ({Item}) => {
 export default ItemDetail
 
 
-
-//<h2>la cantidad es 0 </h2>
-//<h2> la cantidad es {cantidad}</h2>

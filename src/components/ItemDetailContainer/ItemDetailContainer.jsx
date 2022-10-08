@@ -34,19 +34,3 @@ return <ItemDetail Item={Item} />
 
 export default ItemDetailContainer;
 
-//const getProduct=()=> new Promise((res, rej) => {
-  //  const unicaCard=productos.find((prod)=> prod.id===idNumerico);
-    
-    //setTimeout(()=>{
-      //  res(unicaCard);
-
-    //},2000);
-//});
-
-//getProduct()
-//.then((data)=>{
-  //  setItem(data);
-//})
-//.catch((error)=>{
-  //  console.log(error)
-//})
